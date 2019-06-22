@@ -103,7 +103,7 @@ const Form = () => {
       <Dropdown options={allText.dropdownArrays.base} />
       <Button
         onClick={() =>
-          fetch("http://localhost:1337/cakes", {
+          fetch("https://cakeseffiebk.herokuapp.com/cakes", {
             method: "post",
             body: JSON.stringify(formData),
             headers: {
