@@ -4,52 +4,58 @@ import Form from "./Form"
 import ImageCarousel from "./ImageCarousel"
 import InstagramEmbed from "react-instagram-embed"
 import macaroons from "../images/macaroons.jpeg"
+import weddingCake2 from "../images/cake-images/IMG-20190523-WA0009.jpg"
+import { Parallax } from "react-parallax"
 
 import FacebookPage from "./FacebookPage"
 
 const allText = require("../copy.js")
 
-const BackgroundImage = styled.img`
-  position: relative;
-  margin: 0;
-  width: 100%;
-  height: 50vh;
-  object-fit: cover;
-  border: 2px solid #f5f5f5;
-  border-radius: 5px;
-`
-
-const MacaroonContainer = styled.div`
-  position: relative;
-  margin-top: 0;
-  margin-bottom: 5vh;
-`
+const insideStyles = {
+  background: "#0f0c29",
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%,-50%)",
+  borderRadius: "2%"
+}
 
 const Home = () => {
   return (
     <React.Fragment>
-      <MacaroonContainer>
-        <BackgroundImage alt={"macaroons"} src={macaroons} />
-      </MacaroonContainer>
-      <div className="fillerText">
-        {allText.home.firstTypography.map((text, i) => (
-          <p variant="body1" className="introText" key={i}>
-            <b>{text}</b>
-          </p>
-        ))}
-      </div>
+      <Parallax bgImage={macaroons} strength={-400}>
+        <div style={{ height: "150vh" }}>
+          <div style={insideStyles}>
+            <div className="fillerText">
+              {allText.home.firstTypography.map((text, i) => (
+                <p variant="body1" className="introText" key={i}>
+                  <b>{text}</b>
+                </p>
+              ))}
+            </div>
+          </div>
+        </div>
+      </Parallax>
+      <div className="fillerText"> A selection of our previous bakes </div>
       <div className="introTextContainer scroll-gallery">
         <div className="imageCarouselContainer">
           <ImageCarousel />
         </div>
       </div>
-      <div className="fillerText scroll-about">
-        {allText.home.secondTypography.map((text, i) => (
-          <p variant="body1" className="introText" key={i}>
-            <b>{text}</b>
-          </p>
-        ))}
-      </div>
+      <Parallax bgImage={weddingCake2} strength={-400}>
+        <div style={{ height: "100vh" }}>
+          <div style={insideStyles}>
+            <div className="fillerText scroll-about">
+              {allText.home.secondTypography.map((text, i) => (
+                <p variant="body1" className="introText" key={i}>
+                  <b>{text}</b>
+                </p>
+              ))}
+            </div>
+          </div>
+        </div>
+      </Parallax>
+      <div className="fillerText"> Please follow our social media pages</div>
       <div className="introTextContainer scroll-insta">
         <div className="instaContainer">
           <InstagramEmbed

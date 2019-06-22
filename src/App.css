@@ -1,5 +1,18 @@
 body {
-  background-color: white;
+  background: #0f0c29; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #24243e,
+    #302b63,
+    #0f0c29
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #24243e,
+    #302b63,
+    #0f0c29
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   font-family: "Signika", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -13,9 +26,10 @@ body {
   right: 0;
   width: 100%;
   z-index: 1000;
+  background: #0f0c29 !important;
 }
 #restOfContent {
-  padding-top: 11%;
+  padding-top: 3%;
 }
 
 .copy {
@@ -31,7 +45,7 @@ body {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-color: white;
+
   margin-top: 5vh;
   margin-bottom: 5vh;
   padding-top: 5vh;
@@ -46,8 +60,12 @@ body {
   padding: 2vh;
   font-weight: bold;
   font-size: calc(6px + 3vmin);
+  color: #f1be5e8a;
+  border-radius: 5%;
 }
 .fillerText {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
   font-size: calc(6px + 3vmin);
   font-weight: bold;
   text-align: center;
@@ -56,22 +74,19 @@ body {
 .fa {
   padding: 5vmin;
   font-size: calc(10px + 2vmin);
-  width: 2vw;
+
   text-align: center;
   text-decoration: none;
+  margin-right: 5px;
+  background: #f1be5e8a;
+  color: #0f0c29;
 }
 .fa:hover {
   opacity: 0.7;
 }
 .fa-facebook {
-  background: #f1be5e8a;
-  color: white;
-  border-right: 5px solid white;
 }
 .fa-instagram {
-  background: #f1be5e8a;
-  color: white;
-  border-right: 5px solid white;
 }
 
 .NavBarLogoContainer {
@@ -93,8 +108,8 @@ body {
   margin-left: 1em;
 }
 #customNavBarBorder {
+  background: #0f0c29;
   box-shadow: none;
-  border-bottom: 1px solid #f5f5f5;
 }
 
 /* Custom Select */

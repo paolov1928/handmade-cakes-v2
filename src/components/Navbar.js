@@ -13,12 +13,11 @@ const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
     color: "#f1be5e8a",
-    backgroundColor: "white",
     boxShadow: "none"
   },
   menuButton: {
     backgroundColor: "#f1be5e8a",
-    color: "white",
+    color: "#0f0c29",
     display: "flex",
     width: "13vw",
     justifyContent: "center",
@@ -47,7 +46,7 @@ function MenuAppBar() {
 
   return (
     <div className={classes.root}>
-      <AppBar color="transparent" position="static" id="customNavBarBorder">
+      <AppBar position="static" id="customNavBarBorder">
         <Toolbar>
           <Logo />
           <div className={classes.socialButtons}>

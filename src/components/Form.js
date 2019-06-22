@@ -27,7 +27,7 @@ const Container = styled.div`
 const FormTitle = styled.p`
   color: #f1be5e8a;
   margin: 1vh;
-  margin-bottom: 2vh;
+  margin-bottom: 5vh;
   font-weight: bold;
   font-size: calc(4px + 3vmin);
 `
@@ -53,7 +53,7 @@ const FormInput = styled.input`
 
 const FormMessageInput = styled.textarea`
   background-color: #f0f0f0;
-  height: 5.5em;
+  height: 20vh;
   min-width: 40vw;
   border: 1px solid #aaa;
 `
