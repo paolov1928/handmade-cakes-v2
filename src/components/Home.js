@@ -25,12 +25,7 @@ const imageStyled = { maxHeight: "1200px" }
 const Home = () => {
   return (
     <React.Fragment>
-      <Parallax
-        bgImage={macaroons}
-        strength={-400}
-        bgImageStyle={imageStyled}
-        blur={{ min: -2, max: 4 }}
-      >
+      <Parallax bgImage={macaroons} strength={-400} bgImageStyle={imageStyled}>
         <div style={{ height: "130vh" }}>
           <div style={insideStyles}>
             <div className="fillerText">
@@ -49,11 +44,7 @@ const Home = () => {
           <ImageCarousel />
         </div>
       </div>
-      <Parallax
-        bgImage={weddingCake2}
-        strength={-400}
-        blur={{ min: -2, max: 4 }}
-      >
+      <Parallax bgImage={weddingCake2} strength={-400}>
         <div style={{ height: "100vh" }}>
           <div style={insideStyles}>
             <div className="fillerText scroll-about">
