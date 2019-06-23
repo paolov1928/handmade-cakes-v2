@@ -8,7 +8,6 @@ const Button = styled.button`
   background: transparent;
   border-radius: 0.5em;
   border: 2px solid rgba(30, 13, 45, 0.03);
-  color: white;
   margin-top: 5vh;
   padding: 1vh;
   display: block;
@@ -19,6 +18,7 @@ const Button = styled.button`
   background: #f1be5e8a;
   width: 60%;
   max-width: 60%;
+  color: #0f0c29;
 `
 
 const Container = styled.div`
