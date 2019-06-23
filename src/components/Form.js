@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import styled, { css } from "styled-components"
 import Dropdown from "./DropDown"
+import Swal from "sweetalert2"
 const allText = require("../copy.js")
 
 const Button = styled.button`
@@ -16,8 +17,8 @@ const Button = styled.button`
   font-size: calc(8px + 2vmin);
   text-align: center;
   background: #f1be5e8a;
-  width: 100%;
-  max-width: 100%;
+  width: 60%;
+  max-width: 60%;
 `
 
 const Container = styled.div`
@@ -95,26 +96,26 @@ const Form = () => {
         onChange={e => onChange(e)}
         larger
       />
-      <FormLabels>{allText.form.fourthInput}</FormLabels>
-      <Dropdown options={allText.dropdownArrays.drip} />
-      <FormLabels>{allText.form.fifthInput}</FormLabels>
-      <Dropdown options={allText.dropdownArrays.topping} />
-      <FormLabels>{allText.form.sixthInput}</FormLabels>
-      <Dropdown options={allText.dropdownArrays.base} />
-      <Button
-        onClick={() =>
-          fetch("https://cakeseffiebk.herokuapp.com/cakes", {
-            method: "post",
-            body: JSON.stringify(formData),
-            headers: {
-              Accept: "application/json",
-              "Content-Type": "application/json"
-            }
-          })
-        }
-      >
-        <b>Submit</b>
-      </Button>
+      <div className="submitButtonContainer">
+        <Button
+          onClick={() =>
+            fetch("https://cakeseffiebk.herokuapp.com/cakes", {
+              method: "post",
+              body: JSON.stringify(formData),
+              headers: {
+                Accept: "application/json",
+                "Content-Type": "application/json"
+              }
+            })
+              .then(d =>
+                setFormData({ ...formData, name: "", email: "", message: "" })
+              )
+              .then(d => Swal.fire("Thank you for your email!"))
+          }
+        >
+          <b>Send</b>
+        </Button>
+      </div>
     </Container>
   )
 }

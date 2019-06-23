@@ -20,11 +20,18 @@ const insideStyles = {
   borderRadius: "2%"
 }
 
+const imageStyled = { maxHeight: "1200px" }
+
 const Home = () => {
   return (
     <React.Fragment>
-      <Parallax bgImage={macaroons} strength={-400}>
-        <div style={{ height: "150vh" }}>
+      <Parallax
+        bgImage={macaroons}
+        strength={-400}
+        bgImageStyle={imageStyled}
+        blur={{ min: -2, max: 4 }}
+      >
+        <div style={{ height: "130vh" }}>
           <div style={insideStyles}>
             <div className="fillerText">
               {allText.home.firstTypography.map((text, i) => (
@@ -42,7 +49,11 @@ const Home = () => {
           <ImageCarousel />
         </div>
       </div>
-      <Parallax bgImage={weddingCake2} strength={-400}>
+      <Parallax
+        bgImage={weddingCake2}
+        strength={-400}
+        blur={{ min: -2, max: 4 }}
+      >
         <div style={{ height: "100vh" }}>
           <div style={insideStyles}>
             <div className="fillerText scroll-about">
