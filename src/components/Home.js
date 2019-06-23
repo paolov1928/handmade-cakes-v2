@@ -20,7 +20,11 @@ const insideStyles = {
   borderRadius: "2%"
 }
 
-const imageStyledMacaroon = { maxHeight: "1200px" }
+const imageStyledMacaroon = {
+  background: "transparent",
+  maxHeight: "calc(500px + 40vmin)",
+  padding: "30vh"
+}
 const imageStyledWedding = { maxHeight: "1000px" }
 
 const Home = () => {
@@ -31,7 +35,7 @@ const Home = () => {
         strength={-400}
         bgImageStyle={imageStyledMacaroon}
       >
-        <div style={{ height: "130vh" }}>
+        <div style={{ height: "100vh" }}>
           <div style={insideStyles}>
             <div className="fillerText">
               {allText.home.firstTypography.map((text, i) => (
