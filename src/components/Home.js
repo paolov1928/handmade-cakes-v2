@@ -17,7 +17,8 @@ const insideStyles = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%,-50%)",
-  borderRadius: "2%"
+  borderRadius: "2%",
+  opacity: "0.9"
 }
 
 const imageStyledMacaroon = {
