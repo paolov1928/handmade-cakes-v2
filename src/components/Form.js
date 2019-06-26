@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import styled, { css } from "styled-components"
-import Dropdown from "./DropDown"
+
 import Swal from "sweetalert2"
 const allText = require("../copy.js")
 

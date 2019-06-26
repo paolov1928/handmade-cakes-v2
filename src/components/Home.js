@@ -1,5 +1,4 @@
 import React from "react"
-import styled from "styled-components"
 import Form from "./Form"
 import ImageCarousel from "./ImageCarousel"
 import InstagramEmbed from "react-instagram-embed"
