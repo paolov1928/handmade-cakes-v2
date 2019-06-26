@@ -15,10 +15,10 @@ const Button = styled.button`
   height: 3em;
   font-size: calc(8px + 2vmin);
   text-align: center;
-  background: #f1be5e8a;
+  background: #a39b8f;
   width: 60%;
   max-width: 60%;
-  color: #0f0c29;
+  color: #d3cce3;
 `
 
 const Container = styled.div`
@@ -26,7 +26,7 @@ const Container = styled.div`
   margin: 5%;
 `
 const FormTitle = styled.p`
-  color: #f1be5e8a;
+  color: #a39b8f;
   margin: 1vh;
   margin-bottom: 5vh;
   font-weight: bold;
@@ -34,7 +34,7 @@ const FormTitle = styled.p`
 `
 
 const FormLabels = styled.p`
-  color: #f1be5e8a;
+  color: #a39b8f;
   margin: 1vh;
   font-weight: bold;
   font-size: calc(4px + 3vmin);

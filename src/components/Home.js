@@ -11,13 +11,18 @@ import FacebookPage from "./FacebookPage"
 const allText = require("../copy.js")
 
 const insideStyles = {
-  background: "#0f0c29",
+  background: "#d3cce3",
   position: "absolute",
   top: "50%",
   left: "50%",
   transform: "translate(-50%,-50%)",
   borderRadius: "2%",
   opacity: "0.9"
+}
+
+const oldColors = {
+  background: "#0f0c29",
+  text: "#f1be5e8a"
 }
 
 const imageStyledMacaroon = {

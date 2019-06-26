@@ -16,8 +16,8 @@ const useStyles = makeStyles(theme => ({
     boxShadow: "none"
   },
   menuButton: {
-    backgroundColor: "#f1be5e8a",
-    color: "#0f0c29",
+    backgroundColor: "#a39b8f",
+    color: "#d3cce3",
     display: "flex",
     width: "13vw",
     justifyContent: "center",
