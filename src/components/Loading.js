@@ -6,7 +6,7 @@ const App = React.lazy(() => import("../App"))
 class Loading extends Component {
   render() {
     return (
-      <Suspense fallback={<div class="loader">Loading...</div>}>
+      <Suspense fallback={<div className="loader">Loading...</div>}>
         <App />
       </Suspense>
     )

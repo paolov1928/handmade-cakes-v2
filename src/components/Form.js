@@ -2,6 +2,8 @@ import React, { useState } from "react"
 import styled, { css } from "styled-components"
 
 import Swal from "sweetalert2"
+import { Event } from "./Tracking/index"
+
 const allText = require("../copy.js")
 
 const Button = styled.button`
@@ -111,6 +113,7 @@ const Form = () => {
                 setFormData({ ...formData, name: "", email: "", message: "" })
               )
               .then(d => Swal.fire("Thank you for your email!"))
+              .then(d => Event("FORM", "Form Submitted", "HOME_PAGE"))
           }
         >
           <b>Send</b>
