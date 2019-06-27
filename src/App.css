@@ -16,6 +16,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
 }
+
+.centeredHV {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100vh;
+}
+
 #cssMenu {
   position: fixed;
   top: 0;
@@ -145,7 +154,6 @@ body {
   margin: 100px auto;
   font-size: 25px;
   width: 1em;
-  height: 1em;
   border-radius: 50%;
   position: relative;
   text-indent: -9999em;

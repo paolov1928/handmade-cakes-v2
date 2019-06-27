@@ -16,6 +16,17 @@ function App() {
       <div id="restOfContent">
         <Home />
       </div>
+      <footer>
+        <div className="instaContainer">
+          <div className="copy">
+            FrontEndMedia &copy; 2019 | <a href="#">Privacy Policy</a> <br />
+            Website designed by
+            <a href="https://paolov1928.github.io./" rel="nofollow">
+              Paolo Ventura
+            </a>
+          </div>
+        </div>
+      </footer>
     </Fragment>
   )
 }
