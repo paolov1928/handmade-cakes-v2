@@ -8,23 +8,23 @@ import MenuItem from "@material-ui/core/MenuItem"
 import Menu from "@material-ui/core/Menu"
 import animateScrollTo from "animated-scroll-to"
 import Logo from "./Logo"
+const allText = require("../copy.js")
 
 const useStyles = makeStyles(theme => ({
   root: {
-    flexGrow: 1,
-    color: "#f1be5e8a",
-    boxShadow: "none"
+    flexGrow: 1
   },
   menuButton: {
     backgroundColor: "#a39b8f",
     color: "#d3cce3",
-    display: "flex",
-    width: "13vw",
-    justifyContent: "center",
-    maxWidth: "97px"
+    padding: 0,
+    display: "flex"
   },
   socialButtons: {
-    display: "flex"
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-around",
+    alignItems: "center"
   }
 }))
 
@@ -50,83 +50,58 @@ function MenuAppBar() {
         <Toolbar>
           <Logo />
           <div className={classes.socialButtons}>
-            <a
-              href="https://www.instagram.com/handmadecakesbyeffiemae/"
-              className="fa fa-instagram"
-            />
-            <a
-              href="https://www.facebook.com/cakesbyeffiemae/"
-              className="fa fa-facebook"
-            />
-
-            <div className={classes.menuButton}>
-              <IconButton
-                aria-owns={open ? "menu-appbar" : undefined}
-                aria-haspopup="true"
-                onClick={handleMenu}
-                color="inherit"
-              >
-                <MenuIcon />
-              </IconButton>
-              <Menu
-                id="menu-appbar"
-                anchorEl={anchorEl}
-                anchorOrigin={{
-                  vertical: "top",
-                  horizontal: "right"
-                }}
-                transformOrigin={{
-                  vertical: "top",
-                  horizontal: "right"
-                }}
-                open={open}
-                onClose={handleClose}
-              >
-                <MenuItem
-                  onClick={() => {
-                    setAnchorEl(null)
-                    animateScrollTo(
-                      document.querySelector(".scroll-gallery"),
-                      options
-                    )
-                  }}
+            <div className="socialElementContainer">
+              <a
+                href="https://www.instagram.com/handmadecakesbyeffiemae/"
+                className="fa fa-instagram"
+              />
+            </div>
+            <div className="socialElementContainer">
+              <a
+                href="https://www.facebook.com/cakesbyeffiemae/"
+                className="fa fa-facebook"
+              />
+            </div>
+            <div className="socialElementContainer">
+              <div className={classes.menuButton}>
+                <IconButton
+                  id="menu-icon-appbar"
+                  aria-owns={open ? "menu-appbar" : undefined}
+                  aria-haspopup="true"
+                  onClick={handleMenu}
+                  color="inherit"
                 >
-                  Gallery
-                </MenuItem>
-                <MenuItem
-                  onClick={() => {
-                    setAnchorEl(null)
-                    animateScrollTo(
-                      document.querySelector(".scroll-about"),
-                      options
-                    )
+                  <MenuIcon id="menu-icon2-appbar" />
+                </IconButton>
+                <Menu
+                  id="menu-appbar"
+                  anchorEl={anchorEl}
+                  anchorOrigin={{
+                    vertical: "top",
+                    horizontal: "right"
                   }}
-                >
-                  About
-                </MenuItem>
-                <MenuItem
-                  onClick={() => {
-                    setAnchorEl(null)
-                    animateScrollTo(
-                      document.querySelector(".scroll-insta"),
-                      options
-                    )
+                  transformOrigin={{
+                    vertical: "top",
+                    horizontal: "right"
                   }}
+                  open={open}
+                  onClose={handleClose}
                 >
-                  Social Media
-                </MenuItem>
-                <MenuItem
-                  onClick={() => {
-                    setAnchorEl(null)
-                    animateScrollTo(
-                      document.querySelector(".scroll-form"),
-                      options
-                    )
-                  }}
-                >
-                  Contact
-                </MenuItem>
-              </Menu>
+                  {allText.navBar.menuItems.map(item => (
+                    <MenuItem
+                      onClick={() => {
+                        setAnchorEl(null)
+                        animateScrollTo(
+                          document.querySelector(item.scrollTo),
+                          options
+                        )
+                      }}
+                    >
+                      {item.text}
+                    </MenuItem>
+                  ))}
+                </Menu>
+              </div>
             </div>
           </div>
         </Toolbar>

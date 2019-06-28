@@ -1,5 +1,14 @@
 const allText = {
-  navBar: { title: "Effie Mae", underText: "Personalised Cake Designer" },
+  navBar: {
+    title: "Effie Mae",
+    underText: "Personalised Cake Designer",
+    menuItems: [
+      { text: "Gallery", scrollTo: ".scroll-gallery" },
+      { text: "About", scrollTo: ".scroll-about" },
+      { text: "Social Media", scrollTo: ".scroll-insta" },
+      { text: "Contact", scrollTo: ".scroll-form" }
+    ]
+  },
   about: { title: "I am Effie the best baker in the whole of the 7 kingdoms" },
   form: {
     title:

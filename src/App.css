@@ -78,15 +78,25 @@ body {
   text-align: center;
   color: #a39b8f;
 }
-.fa {
-  padding: 5vmin;
-  font-size: calc(10px + 2vmin);
 
-  text-align: center;
+.socialElementContainer {
+  display: flex;
+  width: 7vmin;
+  height: 7vmin;
+  justify-content: center;
+  align-items: center;
+  background-color: #a39b8f;
+  margin: 0.25em;
+  border-radius: 50%;
+}
+.fa {
+  font-size: calc(10px + 2vmin);
   text-decoration: none;
-  margin-right: 5px;
   background: #a39b8f;
   color: #d3cce3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .fa:hover {
   opacity: 0.7;
@@ -94,6 +104,12 @@ body {
 .fa-facebook {
 }
 .fa-instagram {
+}
+#menu-icon-appbar {
+  padding: 0;
+}
+#menu-icon2-appbar {
+  font-size: calc(10px + 2vmin);
 }
 
 .NavBarLogoContainer {
