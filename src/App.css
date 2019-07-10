@@ -11,7 +11,7 @@ body {
     #d3cce3
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-  font-family: "Signika", sans-serif;
+  font-family: "Indie Flower", cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
@@ -59,16 +59,15 @@ body {
   padding-bottom: 5vh;
 }
 .imageCarouselContainer {
-  width: 70vw;
+  width: 100%;
   height: auto;
   object-fit: cover;
 }
 .introText {
   padding: 2vh;
   font-weight: bold;
-  font-size: calc(6px + 3vmin);
-  color: #a39b8f;
-  border-radius: 5%;
+  font-size: calc(10px + 3vmin);
+  color: white;
 }
 .fillerText {
   margin-top: 5vh;
@@ -117,18 +116,16 @@ body {
   flex-grow: 3;
   display: flex;
   flex-direction: column;
+  color: #a39b8f;
+  font-family: "Indie Flower", cursive;
+  align-items: center;
 }
 
 .NavBarTitle {
-  font-size: calc(12px + 3vmin);
-  color: #a39b8f;
-  font-family: "Righteous", cursive;
+  font-size: calc(22px + 4vmin);
 }
 .NavBarTitleUnderText {
-  font-size: calc(2px + 3vmin);
-  color: #a39b8f;
-  font-family: "Righteous", cursive;
-  margin-left: 0.75em;
+  font-size: calc(4px + 3vmin);
 }
 #customNavBarBorder {
   background: #d3cce3; /* fallback for old browsers */

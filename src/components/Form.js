@@ -21,6 +21,7 @@ const Button = styled.button`
   width: 60%;
   max-width: 60%;
   color: #d3cce3;
+  font-family: "Indie Flower", cursive;
 `
 
 const Container = styled.div`

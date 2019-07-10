@@ -1,6 +1,6 @@
 const allText = {
   navBar: {
-    title: "Effie Mae",
+    title: "EFFIE MAE",
     underText: "Personalised Cake Designer",
     menuItems: [
       { text: "Gallery", scrollTo: ".scroll-gallery" },
@@ -46,6 +46,20 @@ const allText = {
     fillerPrices: "Please find below the base prices",
     fillerForm:
       "If interested please do not hesitate to get in contact with us!",
+    textOnFirstImage: [
+      {
+        main: "Delicious Handmade Cakes",
+        under: "Made with love"
+      },
+      {
+        main: "Personalise your very own cake",
+        under: "Enquire today"
+      },
+      {
+        main: "The Most Beautiful Wedding Cakes",
+        under: ""
+      }
+    ],
     firstTypography: [
       "Personalised Cake Design for any special occasion",
       "Gluten & Dairy Free options available",

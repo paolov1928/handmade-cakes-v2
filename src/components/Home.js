@@ -4,13 +4,51 @@ import ImageCarousel from "./ImageCarousel"
 import InstagramEmbed from "react-instagram-embed"
 import macaroons from "../images/macaroons.jpeg"
 import weddingCake2 from "../images/cake-images/IMG-20190523-WA0009.jpg"
+import chocCake from "../images/new-images/choc-cake.jpg"
 import { Parallax } from "react-parallax"
+import styled, { css } from "styled-components"
 
 import FacebookPage from "./FacebookPage"
 
 const allText = require("../copy.js")
 
-const insideStyles = {
+const Button = styled.button`
+  background: transparent;
+  border-radius: 0.5em;
+  border: 2px solid rgba(30, 13, 45, 0.03);
+  padding: 1vh;
+  display: block;
+  min-width: 30vw;
+  height: 3em;
+  font-size: calc(8px + 2vmin);
+  text-align: center;
+  background: #a39b8f;
+  max-width: 60%;
+  color: #d3cce3;
+  font-family: "Indie Flower", cursive;
+  margin-bottom: 5vh;
+`
+
+const topImageText = {
+  background: "transparent",
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%,-50%)",
+  width: "80%"
+}
+const topImageText2 = {
+  background: "#d3cce3",
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%,-50%)",
+  width: "80%",
+  opacity: "0.9",
+  borderRadius: "2%"
+}
+
+const bottomImageText = {
   background: "#d3cce3",
   position: "absolute",
   top: "50%",
@@ -25,34 +63,51 @@ const oldColors = {
   text: "#f1be5e8a"
 }
 
-const imageStyledMacaroon = {
+const topBgImageStyle = {
   background: "transparent",
   maxHeight: "calc(500px + 40vmin)",
-  padding: "30vh"
+  padding: "30vh",
+  opacity: "0.99"
 }
+
 const imageStyledWedding = { maxHeight: "1000px" }
 
 const Home = () => {
   return (
     <React.Fragment>
       <Parallax
-        bgImage={macaroons}
-        strength={-400}
-        bgImageStyle={imageStyledMacaroon}
+        bgImage={chocCake}
+        strength={-300}
+        bgImageStyle={topBgImageStyle}
       >
         <div style={{ height: "100vh" }}>
-          <div style={insideStyles}>
+          <div style={topImageText}>
             <div className="fillerText">
-              {allText.home.firstTypography.map((text, i) => (
-                <p variant="body1" className="introText" key={i}>
-                  <b>{text}</b>
-                </p>
+              {allText.home.textOnFirstImage.map((text, i) => (
+                <React.Fragment>
+                  <p variant="body1" className="introText" key={i}>
+                    <b>{text.main}</b>
+                  </p>
+                  <p key={i + 10}>
+                    <b>{text.under}</b>
+                  </p>
+                </React.Fragment>
               ))}
+            </div>
+            <div className="submitButtonContainer">
+              <Button>Enquire Today</Button>
             </div>
           </div>
         </div>
       </Parallax>
-      <div className="fillerText"> A selection of our previous bakes </div>
+      <div className="fillerText">
+        {allText.home.firstTypography.map((text, i) => (
+          <p key={i}>
+            <b>{text}</b>
+          </p>
+        ))}
+      </div>
+
       <div className="introTextContainer scroll-gallery">
         <div className="imageCarouselContainer">
           <ImageCarousel />
@@ -64,7 +119,7 @@ const Home = () => {
         bgImageStyle={imageStyledWedding}
       >
         <div style={{ height: "100vh" }}>
-          <div style={insideStyles}>
+          <div style={bottomImageText}>
             <div className="fillerText scroll-about">
               {allText.home.secondTypography.map((text, i) => (
                 <p variant="body1" className="introText" key={i}>
