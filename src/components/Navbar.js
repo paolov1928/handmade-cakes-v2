@@ -48,6 +48,48 @@ function MenuAppBar() {
     <div className={classes.root}>
       <AppBar position="static" id="customNavBarBorder">
         <Toolbar>
+          <div className="socialElementContainer">
+            <div className={classes.menuButton}>
+              <IconButton
+                id="menu-icon-appbar"
+                aria-owns={open ? "menu-appbar" : undefined}
+                aria-haspopup="true"
+                onClick={handleMenu}
+                color="inherit"
+              >
+                <MenuIcon id="menu-icon2-appbar" />
+              </IconButton>
+              <Menu
+                id="menu-appbar"
+                anchorEl={anchorEl}
+                anchorOrigin={{
+                  vertical: "top",
+                  horizontal: "right"
+                }}
+                transformOrigin={{
+                  vertical: "top",
+                  horizontal: "right"
+                }}
+                open={open}
+                onClose={handleClose}
+              >
+                {allText.navBar.menuItems.map((item, i) => (
+                  <MenuItem
+                    key={i}
+                    onClick={() => {
+                      setAnchorEl(null)
+                      animateScrollTo(
+                        document.querySelector(item.scrollTo),
+                        options
+                      )
+                    }}
+                  >
+                    {item.text}
+                  </MenuItem>
+                ))}
+              </Menu>
+            </div>
+          </div>
           <Logo />
           <div className={classes.socialButtons}>
             <div className="socialElementContainer">
@@ -61,47 +103,6 @@ function MenuAppBar() {
                 href="https://www.facebook.com/cakesbyeffiemae/"
                 className="fa fa-facebook"
               />
-            </div>
-            <div className="socialElementContainer">
-              <div className={classes.menuButton}>
-                <IconButton
-                  id="menu-icon-appbar"
-                  aria-owns={open ? "menu-appbar" : undefined}
-                  aria-haspopup="true"
-                  onClick={handleMenu}
-                  color="inherit"
-                >
-                  <MenuIcon id="menu-icon2-appbar" />
-                </IconButton>
-                <Menu
-                  id="menu-appbar"
-                  anchorEl={anchorEl}
-                  anchorOrigin={{
-                    vertical: "top",
-                    horizontal: "right"
-                  }}
-                  transformOrigin={{
-                    vertical: "top",
-                    horizontal: "right"
-                  }}
-                  open={open}
-                  onClose={handleClose}
-                >
-                  {allText.navBar.menuItems.map(item => (
-                    <MenuItem
-                      onClick={() => {
-                        setAnchorEl(null)
-                        animateScrollTo(
-                          document.querySelector(item.scrollTo),
-                          options
-                        )
-                      }}
-                    >
-                      {item.text}
-                    </MenuItem>
-                  ))}
-                </Menu>
-              </div>
             </div>
           </div>
         </Toolbar>

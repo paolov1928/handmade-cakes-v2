@@ -19,7 +19,7 @@ function App() {
       <footer>
         <div className="instaContainer">
           <div className="copy">
-            FrontEndMedia &copy; 2019 | <a href="#">Privacy Policy</a> <br />
+            FrontEndMedia &copy; 2019 | <br />
             Website designed by
             <a href="https://paolov1928.github.io./" rel="nofollow">
               Paolo Ventura
