@@ -163,7 +163,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="introTextContainer scroll-form">
+      <div className="introTextContainer scroll-form" id="formContainer">
         <Form />
       </div>
     </React.Fragment>

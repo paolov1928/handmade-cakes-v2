@@ -127,6 +127,12 @@ body {
 .NavBarTitleUnderText {
   font-size: calc(4px + 3vmin);
 }
+
+#formContainer {
+  margin-top: 0;
+  padding-top: 0;
+}
+
 #customNavBarBorder {
   background: #d3cce3; /* fallback for old browsers */
   background: -webkit-linear-gradient(
