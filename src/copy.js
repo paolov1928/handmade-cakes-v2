@@ -53,7 +53,7 @@ const allText = {
       },
       {
         main: "Personalise your very own cake",
-        under: "Enquire today"
+        under: "Made to order"
       },
       {
         main: "The Most Beautiful Wedding Cakes",

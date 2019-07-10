@@ -2,11 +2,11 @@ import React from "react"
 import Form from "./Form"
 import ImageCarousel from "./ImageCarousel"
 import InstagramEmbed from "react-instagram-embed"
-import macaroons from "../images/macaroons.jpeg"
 import weddingCake2 from "../images/cake-images/IMG-20190523-WA0009.jpg"
 import chocCake from "../images/new-images/choc-cake.jpg"
 import { Parallax } from "react-parallax"
 import styled, { css } from "styled-components"
+import animateScrollTo from "animated-scroll-to"
 
 import FacebookPage from "./FacebookPage"
 
@@ -70,6 +70,11 @@ const topBgImageStyle = {
   opacity: "0.99"
 }
 
+const options = {
+  speed: 100,
+  offset: -100
+}
+
 const imageStyledWedding = { maxHeight: "1000px" }
 
 const Home = () => {
@@ -95,7 +100,16 @@ const Home = () => {
               ))}
             </div>
             <div className="submitButtonContainer">
-              <Button>Enquire Today</Button>
+              <Button
+                onClick={() => {
+                  animateScrollTo(
+                    document.querySelector(".scroll-form"),
+                    options
+                  )
+                }}
+              >
+                Enquire Today
+              </Button>
             </div>
           </div>
         </div>
@@ -113,6 +127,7 @@ const Home = () => {
           <ImageCarousel />
         </div>
       </div>
+      <div className="fillerText"> What do we bake?</div>
       <Parallax
         bgImage={weddingCake2}
         strength={-400}
