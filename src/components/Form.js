@@ -17,7 +17,7 @@ const Button = styled.button`
   height: 3em;
   font-size: calc(8px + 2vmin);
   text-align: center;
-  background: #a39b8f;
+  background: #58544e;
   width: 60%;
   max-width: 60%;
   color: #d3cce3;
@@ -29,7 +29,7 @@ const Container = styled.div`
   margin: 5%;
 `
 const FormTitle = styled.p`
-  color: #a39b8f;
+  color: #58544e;
   margin: 1vh;
   margin-bottom: 5vh;
   font-weight: bold;
@@ -37,7 +37,7 @@ const FormTitle = styled.p`
 `
 
 const FormLabels = styled.p`
-  color: #a39b8f;
+  color: #58544e;
   margin: 1vh;
   font-weight: bold;
   font-size: calc(4px + 3vmin);

@@ -41,7 +41,7 @@ body {
 .copy {
   text-align: center;
   font-family: sans-serif;
-  color: #a39b8f;
+  color: #58544e;
 }
 .instaContainer {
   display: flex;
@@ -66,7 +66,7 @@ body {
 .introText {
   padding: 2vh;
   font-weight: bold;
-  font-size: calc(10px + 3vmin);
+  font-size: calc(20px + 3vmin);
   color: white;
 }
 .fillerText {
@@ -75,7 +75,7 @@ body {
   font-size: calc(6px + 3vmin);
   font-weight: bold;
   text-align: center;
-  color: #a39b8f;
+  color: #58544e;
 }
 
 .socialElementContainer {
@@ -84,14 +84,14 @@ body {
   height: 7vmin;
   justify-content: center;
   align-items: center;
-  background-color: #a39b8f;
+  background-color: #58544e;
   margin: 0.25em;
   border-radius: 50%;
 }
 .fa {
   font-size: calc(10px + 2vmin);
   text-decoration: none;
-  background: #a39b8f;
+  background: #58544e;
   color: #d3cce3;
   display: flex;
   justify-content: center;
@@ -113,19 +113,21 @@ body {
 
 .NavBarLogoContainer {
   margin-left: 1.5vh;
-  flex-grow: 3;
+  flex-grow: 1.5;
   display: flex;
   flex-direction: column;
-  color: #a39b8f;
+  color: #58544e;
   font-family: "Indie Flower", cursive;
   align-items: center;
 }
 
 .NavBarTitle {
   font-size: calc(22px + 4vmin);
+  color: black;
 }
 .NavBarTitleUnderText {
-  font-size: calc(4px + 3vmin);
+  font-size: calc(3px + 3vmin);
+  color: black;
 }
 
 #formContainer {

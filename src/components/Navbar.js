@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1
   },
   menuButton: {
-    backgroundColor: "#a39b8f",
+    backgroundColor: "#58544e",
     color: "#d3cce3",
     padding: 0,
     display: "flex"
