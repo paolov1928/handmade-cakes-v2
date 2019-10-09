@@ -336,3 +336,11 @@ body {
       -2.6em 0em 0 0em rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0em #ffffff;
   }
 }
+@media (min-width:961px)  { 
+.containerWhenDesktop {
+  width: 40vw;
+    padding-left: 27vw;
+    padding-top: 10vh;
+    border-radius: 2%;
+}
+}

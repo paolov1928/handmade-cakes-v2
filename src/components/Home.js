@@ -88,49 +88,50 @@ const imageStyledWedding = { maxHeight: "1000px" }
 const Home = () => {
   return (
     <React.Fragment>
-      <Parallax
-        bgImage={chocCake}
-        strength={-300}
-        bgImageStyle={topBgImageStyle}
-      >
-        <div style={{ height: "100vh" }}>
-          <div style={topImageText}>
-            <div className="fillerText">
-              <CarouselProvider
-                naturalSlideWidth={100}
-                naturalSlideHeight={125}
-                totalSlides={3}
-                interval={2000}
-                isPlaying={true}
-                playDirection={"forward"}
-              >
-                <Slider>
-                  {allText.home.textOnFirstImage.map((text, i) => (
-                    <Slide index={0}>
-                      <p className="introText" key={i}>
-                        <b>{text.main}</b>
-                      </p>
-                      <p className="introText" key={i + "a"}>
-                        <b>{text.under}</b>
-                      </p>
-                    </Slide>
-                  ))}
-                </Slider>
-                <div className="submitButtonContainer">
-                  <Button
-                    onClick={() => {
-                      animateScrollTo(
-                        document.querySelector(".scroll-form"),
-                        options
-                      )
-                    }}
-                  >
-                    Enquire Today !
+      <div className="containerWhenDesktop">
+        <Parallax
+          bgImage={chocCake}
+          strength={-300}
+          bgImageStyle={topBgImageStyle}
+        >
+          <div style={{ height: "100vh" }}>
+            <div style={topImageText}>
+              <div className="fillerText">
+                <CarouselProvider
+                  naturalSlideWidth={100}
+                  naturalSlideHeight={125}
+                  totalSlides={3}
+                  interval={2000}
+                  isPlaying={true}
+                  playDirection={"forward"}
+                >
+                  <Slider>
+                    {allText.home.textOnFirstImage.map((text, i) => (
+                      <Slide index={0}>
+                        <p className="introText" key={i}>
+                          <b>{text.main}</b>
+                        </p>
+                        <p className="introText" key={i + "a"}>
+                          <b>{text.under}</b>
+                        </p>
+                      </Slide>
+                    ))}
+                  </Slider>
+                  <div className="submitButtonContainer">
+                    <Button
+                      onClick={() => {
+                        animateScrollTo(
+                          document.querySelector(".scroll-form"),
+                          options
+                        )
+                      }}
+                    >
+                      Enquire Today !
                   </Button>
-                </div>
-              </CarouselProvider>
+                  </div>
+                </CarouselProvider>
 
-              {/* {allText.home.textOnFirstImage.map((text, i) => (
+                {/* {allText.home.textOnFirstImage.map((text, i) => (
                 <React.Fragment>
                   <p className="introText" key={i}>
                     <b>{text.main}</b>
@@ -155,10 +156,11 @@ const Home = () => {
                   )}
                 </React.Fragment>
               ))} */}
+              </div>
             </div>
           </div>
-        </div>
-      </Parallax>
+        </Parallax>
+      </div>
       <div className="fillerText">
         {allText.home.firstTypography.map((text, i) => (
           <p key={i}>
@@ -202,10 +204,10 @@ const Home = () => {
             containerTagName="div"
             protocol=""
             injectScript
-            onLoading={() => {}}
-            onSuccess={() => {}}
-            onAfterRender={() => {}}
-            onFailure={() => {}}
+            onLoading={() => { }}
+            onSuccess={() => { }}
+            onAfterRender={() => { }}
+            onFailure={() => { }}
           />
         </div>
       </div>
