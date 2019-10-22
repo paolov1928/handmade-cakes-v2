@@ -168,32 +168,35 @@ const Home = () => {
           </p>
         ))}
       </div>
-
-      <div className="introTextContainer scroll-gallery">
-        <div className="imageCarouselContainer">
-          <ImageCarousel />
+      <div className="containerWhenDesktop">
+        <div className="introTextContainer scroll-gallery">
+          <div className="imageCarouselContainer">
+            <ImageCarousel />
+          </div>
         </div>
       </div>
       {allText.home.midFillerTypography.map(text => (
         <div className="fillerText">{text}</div>
       ))}
-      <Parallax
-        bgImage={weddingCake2}
-        strength={-400}
-        bgImageStyle={imageStyledWedding}
-      >
-        <div style={{ height: "100vh" }}>
-          <div style={bottomImageText}>
-            <div className="fillerText scroll-about">
-              {allText.home.secondTypography.map((text, i) => (
-                <p variant="body1" className="introText" key={i}>
-                  <b>{text}</b>
-                </p>
-              ))}
+      <div className="containerWhenDesktop">
+        <Parallax
+          bgImage={weddingCake2}
+          strength={-400}
+          bgImageStyle={imageStyledWedding}
+        >
+          <div style={{ height: "100vh" }}>
+            <div style={bottomImageText}>
+              <div className="fillerText scroll-about">
+                {allText.home.secondTypography.map((text, i) => (
+                  <p variant="body1" className="introText" key={i}>
+                    <b>{text}</b>
+                  </p>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      </Parallax>
+        </Parallax>
+      </div>
       <div className="fillerText"> {allText.home.socialMediaComment}</div>
       <div className="introTextContainer scroll-insta">
         <div className="instaContainer">
