@@ -1,22 +1,19 @@
 import React from "react"
 import Form from "./Form"
 import ImageCarousel from "./ImageCarousel"
-import InstagramEmbed from "react-instagram-embed"
 import weddingCake2 from "../images/cake-images/IMG-20190523-WA0009.jpg"
 import chocCake from "../images/new-images/choc-cake2.jpg"
 import { Parallax } from "react-parallax"
-import styled, { css } from "styled-components"
+import styled from "styled-components"
 import animateScrollTo from "animated-scroll-to"
 import {
   CarouselProvider,
   Slider,
   Slide,
-  ButtonBack,
-  ButtonNext
 } from "pure-react-carousel"
 import "pure-react-carousel/dist/react-carousel.es.css"
-
-import FacebookPage from "./FacebookPage"
+import Instagram from "./Instagram"
+import FillerText from "./FillerText"
 
 const allText = require("../copy.js")
 
@@ -45,16 +42,7 @@ const topImageText = {
   transform: "translate(-50%,-50%)",
   width: "80%"
 }
-const topImageText2 = {
-  background: "#d3cce3",
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%,-50%)",
-  width: "80%",
-  opacity: "0.9",
-  borderRadius: "2%"
-}
+
 
 const bottomImageText = {
   background: "#d3cce3",
@@ -66,10 +54,6 @@ const bottomImageText = {
   opacity: "0.9"
 }
 
-const oldColors = {
-  background: "#0f0c29",
-  text: "#f1be5e8a"
-}
 
 const topBgImageStyle = {
   background: "transparent",
@@ -130,32 +114,6 @@ const Home = () => {
                   </Button>
                   </div>
                 </CarouselProvider>
-
-                {/* {allText.home.textOnFirstImage.map((text, i) => (
-                <React.Fragment>
-                  <p className="introText" key={i}>
-                    <b>{text.main}</b>
-                  </p>
-                  {!text.under ? (
-                    <div className="submitButtonContainer">
-                      <Button
-                        onClick={() => {
-                          animateScrollTo(
-                            document.querySelector(".scroll-form"),
-                            options
-                          )
-                        }}
-                      >
-                        Enquire Today
-                      </Button>
-                    </div>
-                  ) : (
-                    <p className="introText" key={i + 10}>
-                      <b>{text.under}</b>
-                    </p>
-                  )}
-                </React.Fragment>
-              ))} */}
               </div>
             </div>
           </div>
@@ -176,7 +134,7 @@ const Home = () => {
         </div>
       </div>
       {allText.home.midFillerTypography.map(text => (
-        <div className="fillerText">{text}</div>
+        <FillerText text={text} />
       ))}
       <div className="containerWhenDesktop">
         <Parallax
@@ -197,28 +155,17 @@ const Home = () => {
           </div>
         </Parallax>
       </div>
-      <div className="fillerText"> {allText.home.socialMediaComment}</div>
-      <div className="introTextContainer scroll-insta">
-        <div className="instaContainer">
-          <InstagramEmbed
-            url="https://www.instagram.com/p/BxwcLFTnNIw/"
-            maxWidth={320}
-            hideCaption={false}
-            containerTagName="div"
-            protocol=""
-            injectScript
-            onLoading={() => { }}
-            onSuccess={() => { }}
-            onAfterRender={() => { }}
-            onFailure={() => { }}
-          />
-        </div>
-      </div>
 
-      <div className="introTextContainer scroll-form" id="formContainer">
-        <Form />
-      </div>
-    </React.Fragment>
+      <FillerText text={allText.home.socialMediaComment} />
+      <Instagram />
+      <FillerText text="Reviews:" />
+      {allText.home.testimonials.map(text => (
+        <FillerText text={text} />
+      ))}
+
+      <Form />
+
+    </React.Fragment >
   )
 }
 

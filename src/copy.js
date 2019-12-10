@@ -50,8 +50,23 @@ const allText = {
       "Made to order, beautiful, freshly baked cakes and macaroons",
       "Uniquely personalised using exciting custom made ingredients",
       "Delivery Available"
-    ]
+    ],
+    testimonials: [
+      "It was suitably splendid in looks and delicious to taste.",
+      "I honestly can’t remember when I’ve had such a beautiful cake and it was a fine way to top off my celebrations.",
+      "I passed on your card to a friend with a ‘highly recommended’ rating.",
+      "Thank you so much for a truly beautiful cake!!!",
+      "We were all so impressed! Everyone thought it was fabulous and it tasted delicious!"
+    ],
   }
 }
 
 module.exports = allText
+
+
+
+
+
+
+
+

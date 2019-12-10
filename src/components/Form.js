@@ -75,52 +75,54 @@ const Form = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
 
   return (
-    <Container>
-      <FormTitle>{allText.form.title}</FormTitle>
-      <FormLabels>{allText.form.firstInput}</FormLabels>
-      <FormInput
-        type="text"
-        name="name"
-        value={name}
-        onChange={e => onChange(e)}
-      />
-      <FormLabels>{allText.form.secondInput}</FormLabels>
-      <FormInput
-        type="email"
-        name="email"
-        value={email}
-        onChange={e => onChange(e)}
-      />
-      <FormLabels>{allText.form.thirdInput}</FormLabels>
-      <FormMessageInput
-        type="text"
-        name="message"
-        value={message}
-        onChange={e => onChange(e)}
-        larger
-      />
-      <div className="submitButtonContainer">
-        <Button
-          onClick={() =>
-            fetch("https://cakeseffiebk.herokuapp.com/cakes", {
-              method: "post",
-              body: JSON.stringify(formData),
-              headers: {
-                Accept: "application/json",
-                "Content-Type": "application/json"
-              }
-            })
-              .then(d =>
-                setFormData({ ...formData, name: "", email: "", message: "" })
-              )
-              .then(d => Swal.fire("Thank you for your email!"))
-              .then(d => Event("FORM", "Form Submitted", "HOME_PAGE"))
-          }
-        >
-          <b>Send</b>
-        </Button>
-      </div>
-    </Container>
+    <div className="introTextContainer scroll-form" id="formContainer">
+      <Container>
+        <FormTitle>{allText.form.title}</FormTitle>
+        <FormLabels>{allText.form.firstInput}</FormLabels>
+        <FormInput
+          type="text"
+          name="name"
+          value={name}
+          onChange={e => onChange(e)}
+        />
+        <FormLabels>{allText.form.secondInput}</FormLabels>
+        <FormInput
+          type="email"
+          name="email"
+          value={email}
+          onChange={e => onChange(e)}
+        />
+        <FormLabels>{allText.form.thirdInput}</FormLabels>
+        <FormMessageInput
+          type="text"
+          name="message"
+          value={message}
+          onChange={e => onChange(e)}
+          larger
+        />
+        <div className="submitButtonContainer">
+          <Button
+            onClick={() =>
+              fetch("https://cakeseffiebk.herokuapp.com/cakes", {
+                method: "post",
+                body: JSON.stringify(formData),
+                headers: {
+                  Accept: "application/json",
+                  "Content-Type": "application/json"
+                }
+              })
+                .then(d =>
+                  setFormData({ ...formData, name: "", email: "", message: "" })
+                )
+                .then(d => Swal.fire("Thank you for your email!"))
+                .then(d => Event("FORM", "Form Submitted", "HOME_PAGE"))
+            }
+          >
+            <b>Send</b>
+          </Button>
+        </div>
+      </Container>
+    </div>
   )
 }
 
