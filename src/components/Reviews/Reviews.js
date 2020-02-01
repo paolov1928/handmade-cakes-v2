@@ -9,7 +9,7 @@ export default function ReviewsContainer() {
             <div className="reviewsContainerTitle" > {"Reviews:"}</div>
             <ul>
             {allText.home.testimonials.map((text,i) => (
-                <li className="review" key={i}> {text}</li>
+                <li className="review py-1" key={i}> {text}</li>
             ))}
             </ul>
         </div>
