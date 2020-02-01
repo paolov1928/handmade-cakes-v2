@@ -58,11 +58,7 @@ body {
   padding-top: 5vh;
   padding-bottom: 5vh;
 }
-.imageCarouselContainer {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
+
 .introText {
   padding: 2vh;
   font-weight: bold;
@@ -335,12 +331,4 @@ body {
       -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.5),
       -2.6em 0em 0 0em rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0em #ffffff;
   }
-}
-@media (min-width:961px)  { 
-.containerWhenDesktop {
-  width: 40vw;
-    padding-left: 27vw;
-    padding-top: 10vh;
-    border-radius: 2%;
-}
 }

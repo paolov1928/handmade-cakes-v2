@@ -1,0 +1,15 @@
+.midFillerTextContainer {
+    color: #d3cce3;
+    background: #58544e;
+    font-size: calc(4px + 3vmin);
+    padding: 5%;
+}
+
+.midFillerText {
+    color: #d3cce3;
+    
+}
+
+ul{
+    list-style-type: circle;
+}

@@ -1,0 +1,41 @@
+.firstImageContainer{
+    padding: 5%;
+}
+
+.firstImageButton{
+    position: 'absolute';
+          top: '50%'; 
+          left: '50%'
+}
+
+@media (min-width:961px)  { 
+.enquireButton {
+  height: 5em;
+  font-size: calc(20px + 3vmin);
+}
+}
+
+.enquireButton{
+    margin-top: 25%;
+    background: #58544e;
+    color: #d3cce3;
+    border: none;
+    width: 60%;
+    
+}
+
+.firstImageTextCarousel{
+    margin-top: 20%;
+}
+
+.innerCarouselText {
+  padding: 2vh;
+  font-weight: bold;
+  font-size: calc(20px + 3vmin);
+  color: white;
+    text-shadow: 0 2px 0 #58544e;
+}
+
+ .firstImageTextCarousel > .carousel > .carousel-indicators{
+    display: none;
+}

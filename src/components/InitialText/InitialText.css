@@ -1,0 +1,9 @@
+.initialTextContainer {
+    color: #58544e;
+    font-size: calc(4px + 3vmin);
+    padding: 5%;
+}
+
+.initialText {
+    color: #58544e;
+}
