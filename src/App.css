@@ -96,10 +96,6 @@ body {
 .fa:hover {
   opacity: 0.7;
 }
-.fa-facebook {
-}
-.fa-instagram {
-}
 #menu-icon-appbar {
   padding: 0;
 }
@@ -152,21 +148,6 @@ body {
   justify-content: center;
 }
 
-.App-logo {
-  height: 100vh;
-  background: #d3cce3; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #e9e4f0,
-    #d3cce3
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #e9e4f0,
-    #d3cce3
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  padding: 10vh;
-}
 .loader {
   margin: 100px auto;
   font-size: 25px;
