@@ -8,7 +8,7 @@ class Instagram extends Component {
             <div className="introTextContainer scroll-insta">
                 <div className="instaContainer">
                     <InstagramEmbed
-                        url="https://www.instagram.com/p/BxwcLFTnNIw/"
+                        url="https://www.instagram.com/p/B6XokuXpjaS/"
                         maxWidth={320}
                         hideCaption={false}
                         containerTagName="div"

@@ -3,8 +3,8 @@ const allText = {
     title: "EFFIE MAE",
     underText: "Personalised Cake Designer",
     menuItems: [
-      { text: "Images Gallery", scrollTo: ".scroll-gallery" },
-      { text: "Cake Varieties", scrollTo: ".scroll-about" },
+      { text: "Gallery", scrollTo: ".scroll-gallery" },
+      { text: "Personalised Cakes", scrollTo: ".scroll-about" },
       { text: "Social Media", scrollTo: ".scroll-insta" },
       { text: "Contact", scrollTo: ".scroll-form" }
     ]

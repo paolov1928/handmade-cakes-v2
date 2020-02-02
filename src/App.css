@@ -64,6 +64,7 @@ body {
   font-weight: bold;
   font-size: calc(20px + 3vmin);
   color: white;
+    text-shadow: 0 2px 0 #58544e;
 }
 .fillerText {
   margin-top: 5vh;
@@ -141,6 +142,12 @@ body {
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   box-shadow: none;
+}
+
+@media (min-width:961px)  { 
+input {
+  width: 60%;
+}
 }
 
 .submitButtonContainer {

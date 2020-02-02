@@ -16,6 +16,7 @@ import cake6 from "../../images/cakePicsFeb/cake6.jpg"
 import cake7 from "../../images/cakePicsFeb/cake7.jpg"
 import cake8 from "../../images/cakePicsFeb/cake8.jpg"
 import cake9 from "../../images/cakePicsFeb/cake9.jpg"
+import cake10 from "../../images/cakePicsFeb/cake10.jpg"
 
 export default function ImagesCarousel() {
     const [index, setIndex] = useState(0);
@@ -41,6 +42,7 @@ export default function ImagesCarousel() {
         cake7,
         cake8,
         cake9,
+        cake10,
     ]
 
     function shuffle(a) {
@@ -57,12 +59,12 @@ export default function ImagesCarousel() {
     return (
         <div className="scroll-gallery">
         <Carousel activeIndex={index} direction={direction} onSelect={handleSelect}>
-            {shuffle(imagesArray).map((image, i) => (
+            {imagesArray.map((image, i) => (
                 <Carousel.Item key={i}>
                     <img
                         className="d-block w-100"
                         src={image}
-                        alt="First slide"
+                        alt="Cake slide"
                         key={i}
                     />
                 </Carousel.Item>

@@ -15,7 +15,7 @@ import ImagesCarousel from "./ImageCarousel/ImagesCarousel"
 const allText = require("../copy.js")
 
 const bottomImageText = {
-  background: "#d3cce3",
+  background: "transparent",
   position: "absolute",
   top: "50%",
   left: "50%",
