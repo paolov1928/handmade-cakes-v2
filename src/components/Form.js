@@ -114,7 +114,7 @@ const Form = () => {
                 .then(d =>
                   setFormData({ ...formData, name: "", email: "", message: "" })
                 )
-                .then(d => Swal.fire("Thank you for your email!"))
+                .then(d => Swal.fire("Sorry that didn't work! Please use Instagram/Facebook"))
                 .then(d => Event("FORM", "Form Submitted", "HOME_PAGE"))
             }
           >
